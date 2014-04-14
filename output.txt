@@ -1,0 +1,2 @@
+The maximum goal difference is:7
+The average goal difference is rounded off to an integer is:2.3

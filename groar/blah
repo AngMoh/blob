@@ -1,0 +1,68 @@
+#include <fstream>
+#include <iostream> 
+using namespace std;
+
+
+
+int main ()
+{
+    ifstream infile1("/Users/niels/Desktop/groar/groar/data1.txt");
+    ifstream infile2("/Users/niels/Desktop/groar/groar/data2.txt");
+    
+    int i,a,b;          // define i,a,b. All 3 have no guaranteed default value
+    int a_score=0;      // define a_score and set value of a_score to 0
+    int b_score=0;      // define b_score and set value of b_score to 0
+    
+    
+    cout<<"Game A B"<<endl;
+    
+    for(i=1; i<=6; i++)
+    {
+        if(infile1 >> a)
+        {
+            //its ok
+        }
+             else
+            {
+                cout << " error meh...\n";
+            }
+        
+                ;
+        infile2 >> b;
+        //print goals
+        cout << i<< ". "<< a << " " << b;
+       
+        //print who won
+        if ( a > b)
+        {
+            a_score++;
+            cout << " A";
+        }
+        else if ( a < b )
+        {
+            b_score = b_score+1;
+            cout<<" B";
+        }
+        else
+            cout <<" Draw" ;
+        
+        // new line
+        cout << endl;
+    }
+    
+    cout<<endl;
+    
+    // print who won the tournament
+        if ( a_score > b_score )
+        cout<< "A Won: ";
+    else if ( a_score < b_score )
+        cout<< "A Lost: ";
+    else
+        cout<< "Draw: ";
+    
+    //print total result
+    cout << a_score<<"-"<<b_score<<endl;
+    
+    system("pause");
+    return 0;
+}
