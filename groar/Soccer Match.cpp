@@ -31,8 +31,9 @@ int main()
     avg=avg/n;
 
     outfile<<"The maximum goal difference is:"<<max<<endl;
-    outfile<<"The average goal difference is rounded off to an integer is:"<<avg<<endl;
+    outfile<<"The average goal difference is rounded off to an integer is :"<<avg<<endl;
     system("pause");
+    
     return 0;
     
         
